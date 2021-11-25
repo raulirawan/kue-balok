@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class TransactionDetails extends Model
+class TransactionDetail extends Model
 {
     protected $fillable = [
-        'transaction_id','food_id','price','quantity'
+        'transaction_id','food_id','price','qty'
     ];
 
 

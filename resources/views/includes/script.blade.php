@@ -1,5 +1,6 @@
 
 <!-- jQuery -->
+<script src="{{ url('assets/plugins/jquery/jquery.js') }}"></script>
 <script src="{{ url('assets/plugins/jquery/jquery.minn.js') }}"></script>
 <!-- Bootstrap 4 -->
 <script src="{{ url('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>

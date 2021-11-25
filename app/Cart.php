@@ -4,12 +4,15 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Transaction extends Model
+class Cart extends Model
 {
     protected $fillable = [
-        'invoice','user_id','total_price','status','type_payment','notes','cash','kembalian'
+        'food_id','user_id','price','qty'
     ];
 
+    public function food() {
+        return $this->belongsTo(Food::class, 'food_id','id');
+    }
 
     public function user() {
         return $this->belongsTo(User::class, 'user_id','id');
