@@ -51,23 +51,51 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('transaction.index') }}" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Transaction
-              </p>
-            </a>
-          </li>
-          {{-- <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-tree"></i>
               <p>
-                Data Dokter
+                Transction
+                <i class="fas fa-angle-left right"></i>
               </p>
             </a>
-          </li> --}}
-
-
+            <ul class="nav nav-treeview" style="display: none;">
+              <li class="nav-item">
+                <a href="{{ route('transaction.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kasir Penjualan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('report.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Laporan Transaksi</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tree"></i>
+              <p>
+                Transaction Online
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview" style="display: none;">
+              <li class="nav-item">
+                <a href="{{ route('order-online.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Order Online</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('order-online.pending') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Request Order Online</p>
+                </a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

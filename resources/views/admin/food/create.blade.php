@@ -53,6 +53,16 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
+                                        <label for="exampleInputEmail1">Harga</label>
+                                        <select name="kategori" id="kategori" class="form-control">
+                                            <option value="Makanan">Makanan</option>
+                                            <option value="Minuman">Minuman</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Masukan Harga
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
                                         <label for="exampleInputEmail1">Deskripsi</label>
                                         <textarea name="description"
                                             class="form-control @error('description') is-invalid @enderror"

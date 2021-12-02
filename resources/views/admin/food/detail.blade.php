@@ -46,6 +46,10 @@
                             <td>Rp. {{ number_format($food->price) }}</td>
                         </tr>
                         <tr>
+                            <th style="width: 400px">Kategori</th>
+                            <td>{{ $food->kategori }}</td>
+                        </tr>
+                        <tr>
                             <th style="width: 400px">Deskripsi</th>
                             <td>{{ $food->description }}</td>
                         </tr>

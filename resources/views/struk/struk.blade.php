@@ -57,9 +57,7 @@
         }
     </style>
 </head>
-<!-- <body onload="window.print()"> -->
-
-<body>
+<body onload="window.print()">
 
     <div class="content">
         <div class="title">
@@ -82,7 +80,7 @@
                     <tr>
                         <td>Kasir</td>
                         <td>:</td>
-                        <td>Fathan</td>
+                        <td>{{ ucfirst(Auth::user()->name ) }}</td>
                     </tr>
                 </tbody>
             </table>

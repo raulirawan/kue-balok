@@ -42,21 +42,21 @@ class FoodController extends Controller
             'name' => 'required|string',
             'photo' => 'required|mimes:png,jpg,jpeg',
             'price' => 'required|numeric',
+            'kategori' => 'required',
             'description' => 'required',
         ]);
         $data = $request->all();
 
-        if($request->hasFile('photo')){
+        if ($request->hasFile('photo')) {
             $data['photo'] = $request->file('photo')->store('public/assets/food');
         }
 
         $result = Food::create($data);
 
-        if($result != null) {
-            return redirect()->route('food.index')->with('success','Data Berhasil di Tambahkan!');
+        if ($result != null) {
+            return redirect()->route('food.index')->with('success', 'Data Berhasil di Tambahkan!');
         } else {
-            return redirect()->route('food.index')->with('error','Data Gagal di Tambahkan!');
-
+            return redirect()->route('food.index')->with('error', 'Data Gagal di Tambahkan!');
         }
     }
 
@@ -97,6 +97,7 @@ class FoodController extends Controller
             'name' => 'required|string',
             'photo' => 'mimes:png,jpg,jpeg',
             'price' => 'required|numeric',
+            'kategori' => 'required',
             'description' => 'required',
         ]);
 
@@ -104,7 +105,7 @@ class FoodController extends Controller
 
         $item = Food::findOrFail($id);
 
-        if($request->hasFile('photo')){
+        if ($request->hasFile('photo')) {
             $data['photo'] = $request->file('photo')->store('public/assets/food');
 
             if (Storage::exists($item->photo)) {
@@ -114,11 +115,10 @@ class FoodController extends Controller
 
         $result = $item->update($data);
 
-        if($result != null) {
-            return redirect()->route('food.index')->with('success','Data Berhasil di Update!');
+        if ($result != null) {
+            return redirect()->route('food.index')->with('success', 'Data Berhasil di Update!');
         } else {
-            return redirect()->route('food.index')->with('error','Data Gagal di Update!');
-
+            return redirect()->route('food.index')->with('error', 'Data Gagal di Update!');
         }
     }
 
@@ -137,11 +137,10 @@ class FoodController extends Controller
         }
         $result = $item->delete();
 
-        if($result != null) {
-            return redirect()->route('food.index')->with('success','Data Berhasil di Hapus!');
+        if ($result != null) {
+            return redirect()->route('food.index')->with('success', 'Data Berhasil di Hapus!');
         } else {
-            return redirect()->route('food.index')->with('error','Data Gagal di Hapus!');
-
+            return redirect()->route('food.index')->with('error', 'Data Gagal di Hapus!');
         }
     }
 }

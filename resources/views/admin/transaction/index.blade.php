@@ -364,6 +364,7 @@
                 $('#food_id').val(food_id);
                 $('#qty').val(1);
                 $('#modal-item').modal('hide');
+
             });
 
             // Untuk Add To Cart
@@ -529,9 +530,10 @@
                                             var cash = $('#cash').val(0);
                                             var kembalian = $('#return').val(0);
                                         });
-                                        window.open("{{ url('admin/print/bon') }}" + '/' + result.transaction_id,
-                                                '_blank')
-                                        location.reload();
+                                    window.open("{{ url('admin/print/bon') }}" + '/' + result
+                                        .transaction_id,
+                                        '_blank')
+                                    location.reload();
 
                                 } else {
                                     alert('Transaksi Gagal');

@@ -29,7 +29,7 @@
               <!-- small box -->
               <div class="small-box bg-success">
                 <div class="inner">
-                  <h3>7</h3>
+                  <h3>{{ $sukses }}</h3>
 
                   <p>Status Sukses</p>
                 </div>
@@ -43,7 +43,7 @@
               <!-- small box -->
               <div class="small-box bg-warning">
                 <div class="inner">
-                  <h3>4</h3>
+                  <h3>{{ $pending }}</h3>
 
                   <p>Status Pending</p>
                 </div>
@@ -57,7 +57,7 @@
               <!-- small box -->
               <div class="small-box bg-danger">
                 <div class="inner">
-                  <h3>5</h3>
+                  <h3>{{ $cancelled }}</h3>
 
                   <p>Status Cancel</p>
                 </div>

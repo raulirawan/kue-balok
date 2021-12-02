@@ -78,6 +78,7 @@ class TransactionController extends Controller
             'cash' => $request->cash,
             'kembalian' => $request->kembalian,
             'notes' => '',
+            'status_pembayaran' => 'PAID'
         ]);
 
         foreach ($carts as $cart) {

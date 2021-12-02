@@ -55,6 +55,18 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
+                                        <label for="exampleInputEmail1">Kategori</label>
+                                        <select name="kategori" id="kategori" class="form-control">
+                                            <option value="{{ $food->kategori }}" selected>{{ $food->kategori }}
+                                            </option>
+                                            <option value="Makanan">Makanan</option>
+                                            <option value="Minuman">Minuman</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Masukan Kategori
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
                                         <label for="exampleInputEmail1">Deskripsi</label>
                                         <textarea name="description"
                                             class="form-control @error('description') is-invalid @enderror"

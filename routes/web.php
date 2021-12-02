@@ -40,6 +40,18 @@ Route::prefix('admin')
 
         Route::get('load/cart', 'TransactionController@loadDataCart')->name('load.cart');
         Route::get('print/bon/{id}', 'TransactionController@printBon')->name('printBon');
+
+        // Laporan
+        Route::get('laporan','ReportController@index')->name('report.index');
+        Route::get('laporan/transaction/detail/{id}','ReportController@detail')->name('report.detail');
+
+        Route::get('order-online','OnlineTransactionController@index')->name('order-online.index');
+        Route::get('order-online/detail/{id}','OnlineTransactionController@detail')->name('order-online.detail');
+
+        Route::get('order-online/pending/request','OnlineTransactionController@indexPending')->name('order-online.pending');
+
+        Route::put('accept/order/{id}','OnlineTransactionController@accept')->name('accept.order');
+        Route::put('reject/order/{id}','OnlineTransactionController@reject')->name('reject.order');
     });
 
 
