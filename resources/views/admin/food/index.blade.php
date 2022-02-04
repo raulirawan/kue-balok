@@ -64,7 +64,7 @@
                         <td>{{ $item->name }}</td>
                         <td>Rp. {{ number_format($item->price) }}</td>
                         <td>
-                            <img src="{{ Storage::url($item->photo) }}" style="max-width: 100px;">
+                            <img src="{{ url($item->photo) }}" style="max-width: 100px;">
                         </td>
                         <td>
                           <a href="{{ route('food.show', $item->id) }}" class="btn btn-sm btn-info" style ='float: left; margin-right: 5px'>Detail</a>

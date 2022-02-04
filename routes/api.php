@@ -28,6 +28,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('user/update', 'API\AuthController@updateProfile');
 
     Route::get('transactions','API\TransactionController@all');
+    Route::get('transactions/on/progress','API\TransactionController@onProgress');
+    Route::post('transactions/on/progress/{id}','API\TransactionController@updateTransaction');
     Route::post('checkout','API\TransactionController@checkout');
 
     Route::post('logout', 'API\AuthController@logout');

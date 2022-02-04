@@ -13,7 +13,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <div class="text-muted">Data Statistik di Bawah Ini Merupakan Data Pada Tanggal</div>
+              <div class="text-muted">Data Statistik di Bawah Ini Merupakan Data Pada Tanggal {{ date('Y-m-d') }}</div>
             </ol>
           </div>
         </div>

@@ -83,7 +83,7 @@
                                             Masukan Foto
                                         </div>
                                         <div class="mt-3">
-                                            <img src="{{ Storage::url($food->photo) }}" style="max-width: 100px;">
+                                            <img src="{{ url($food->photo) }}" style="max-width: 100px;">
                                         </div>
                                     </div>
                                 </div>

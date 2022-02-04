@@ -49,9 +49,9 @@ class TransactionController extends Controller
                 );
         }
 
-        $transaction = Transaction::where('user_id', Auth::user()->id);
+        $transaction = Transaction::with(['user'])->where('user_id', Auth::user()->id)->get();
 
-        if ($transaction->exists()) {
+        if ($transaction) {
             return ResponseFormatter::success(
                 $transaction,
                 'Data list transaksi berhasil diambil'
@@ -63,6 +63,36 @@ class TransactionController extends Controller
                 404
             );
         }
+    }
+
+    public function OnProgress()
+    {
+        $transaction = Transaction::with(['user'])->where('status', 'ON PROGRESS')->get();
+        if ($transaction) {
+            return ResponseFormatter::success(
+                $transaction,
+                'Data list transaksi berhasil diambil'
+            );
+        } else {
+            return ResponseFormatter::error(
+                null,
+                'Data transaksi tidak ada',
+                404
+            );
+        }
+    }
+
+    public function updateTransaction($id)
+    {
+        $transaction = Transaction::find($id);
+
+        $transaction->status = 'DELIVERED';
+        $transaction->save();
+
+        return ResponseFormatter::success(
+            $transaction,
+            'Transaksi Berhasil di Update'
+        );
     }
 
     public function checkout(Request $request)

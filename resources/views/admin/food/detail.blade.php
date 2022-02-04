@@ -56,7 +56,7 @@
                         <tr>
                             <th style="width: 400px">Photo</th>
                             <td>
-                                <img src="{{ Storage::url($food->photo) }}" style="max-width: 100px">
+                                <img src="{{ url($food->photo) }}" style="max-width: 100px">
                             </td>
                         </tr>
 
