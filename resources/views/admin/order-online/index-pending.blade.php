@@ -61,7 +61,7 @@
                                         @foreach ($transactions as $item)
                                             <tr>
                                                 <td>
-                                                    <a href="#" class="btn btn-sm btn-info"
+                                                    <a href="{{ route('order-online.detail', $item->id) }}" class="btn btn-sm btn-info"
                                                         style='float: left; margin-right: 5px'>Detail</a>
 
                                                 </td>
