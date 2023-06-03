@@ -87,6 +87,7 @@ class TransactionController extends Controller
         $transaction = Transaction::find($id);
 
         $transaction->status = 'DELIVERED';
+        $transaction->status_pembayaran = 'PAID';
         $transaction->save();
 
         return ResponseFormatter::success(
